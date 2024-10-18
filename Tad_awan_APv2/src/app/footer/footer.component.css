@@ -1,0 +1,30 @@
+.footer-container {
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Same gradient as jumbotron */
+    color: white; /* Text color */
+    padding: 2rem 0; /* Padding for top and bottom */
+    margin-top: 2rem; /* Space between content and footer */
+  }
+  
+  .footer-columns {
+    display: flex;
+    justify-content: space-around; /* Space the cards evenly */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+  
+  .footer-card {
+    flex: 1; /* Allow cards to grow and shrink */
+    max-width: 300px; /* Maximum width for cards */
+    margin: 1rem; /* Space around each card */
+    padding: 1.5rem; /* Padding inside cards */
+    border-radius: 8px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+  }
+  
+  .footer-card h3 {
+    margin-bottom: 1rem; /* Space between heading and content */
+  }
+  
+  .footer-card p {
+    margin-bottom: 0.5rem; /* Space between paragraphs */
+  }
+  
