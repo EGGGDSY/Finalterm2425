@@ -1,14 +1,19 @@
 <!-- Bootstrap Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">BOOKIES</a>
+    <!-- Brand Logo (Bookies) -->
+    <a class="navbar-brand text-primary fw-bold" href="#">BOOKIES</a>
+
+    <!-- Navbar Toggle Button for Small Screens -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <!-- Navbar Links -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ms-auto"> <!-- ms-auto added for right-alignment -->
         <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
@@ -26,3 +31,34 @@
 
 <!-- The content of the routed component will be displayed here -->
 <router-outlet></router-outlet>
+
+<!-- Optional: Styling for Navbar and Active Links -->
+<style>
+  .navbar-light .navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: #007bff; /* Change color on hover */
+  }
+
+  .navbar-light .navbar-nav .nav-link.active {
+    color: #007bff !important; /* Active link color */
+    font-weight: bold;
+  }
+
+  .navbar-light .navbar-nav .nav-link.active:hover {
+    color: #0056b3; /* Active link hover color */
+  }
+
+  .navbar-light .navbar-toggler-icon {
+    background-color: #007bff; /* Toggler icon color */
+  }
+
+  .navbar-brand {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+</style>
