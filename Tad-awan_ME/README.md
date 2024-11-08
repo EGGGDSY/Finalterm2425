@@ -1,27 +1,22 @@
-# AngProj
+# Book Club Web Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+Welcome to the **Book Club Web Application**! This is an online platform for book lovers to discover, discuss, and enjoy their favorite books. Whether you are into fiction, non-fiction, fantasy, or mystery, the Book Club is the perfect place to explore new titles, read reviews, and connect with like-minded readers.
 
-## Development server
+This project is built with **Angular**, **Bootstrap**, and **Font Awesome Icons**, designed to give a modern, responsive experience for all users.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features:
+- **Homepage**: Displays a list of featured books with icons, descriptions, and a welcoming message for users.
+- **About Page**: Provides information about the Book Club and its mission.
+- **Services Page**: Lists the services offered by the Book Club (e.g., Book Reviews, Book Recommendations).
+- **Contact Page**: Contains a contact form for inquiries or feedback.
+- **404 Page**: Handles non-existent routes gracefully by showing a 404 page.
+- **Monthly Book Rankings**: Displays a ranking of books based on popularity, including book descriptions and icons.
 
-## Code scaffolding
+## How to Run Locally
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Prerequisites:
+1. **Node.js and npm**: Make sure you have **Node.js** installed on your system, which includes **npm** (Node Package Manager). You can download and install it from [Node.js official website](https://nodejs.org/).
+   
+2. **Angular CLI**: You need to have Angular CLI installed globally to serve and build your Angular application. To install it, run:
+   ```bash
+   npm install -g @angular/cli
