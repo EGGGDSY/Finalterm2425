@@ -1,0 +1,17 @@
+/* contact.component.css */
+form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #343a40;
+  }
+  
+  button {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+  

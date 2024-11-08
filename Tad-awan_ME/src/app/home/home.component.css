@@ -1,0 +1,23 @@
+/* home.component.css */
+
+/* Style the "Learn More" button */
+.btn-primary {
+  margin-top: 20px;
+}
+
+/* Style for the Book Image */
+.img-fluid {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Space out the Featured Books Section */
+.card-deck .card {
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on Cards */
+.card:hover {
+  transform: scale(1.05);
+}
