@@ -1,6 +1,6 @@
 # Book Club Web Application
 
-Welcome to the **Book Club Web Application**! This is an online platform for book lovers to discover, discuss, and enjoy their favorite books. Whether you are into fiction, non-fiction, fantasy, or mystery, the Book Club is the perfect place to explore new titles, read reviews, and connect with like-minded readers.
+Welcome to the BOOKIES! This is an online platform for book lovers to discover, discuss, and enjoy their favorite books. Whether you are into fiction, non-fiction, fantasy, or mystery, the Book Club is the perfect place to explore new titles, read reviews, and connect with like-minded readers.
 
 This project is built with **Angular**, **Bootstrap**, and **Font Awesome Icons**, designed to give a modern, responsive experience for all users.
 
