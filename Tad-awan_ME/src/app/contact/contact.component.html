@@ -4,31 +4,75 @@
   <!-- Contact Form -->
   <div class="row justify-content-center">
     <div class="col-md-8 col-lg-6">
-      <form>
-        
+      <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+
         <!-- Name Field -->
         <div class="mb-3">
           <label for="name" class="form-label">Your Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter your name"
+            required
+            [(ngModel)]="name"
+            name="name">
         </div>
 
         <!-- Email Field -->
         <div class="mb-3">
           <label for="email" class="form-label">Your Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter your email"
+            required
+            [(ngModel)]="email"
+            name="email">
         </div>
 
         <!-- Message Field -->
         <div class="mb-3">
           <label for="message" class="form-label">Your Message</label>
-          <textarea class="form-control" id="message" rows="6" placeholder="Write your message here" required></textarea>
+          <textarea
+            class="form-control"
+            id="message"
+            rows="6"
+            placeholder="Write your message here"
+            required
+            [(ngModel)]="message"
+            name="message"></textarea>
         </div>
 
         <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary w-100 py-3">Send Message</button>
-
+        <button
+          type="submit"
+          class="btn btn-primary w-100 py-3"
+          [disabled]="!contactForm.form.valid">
+          Send Message
+        </button>
       </form>
     </div>
   </div>
 </div>
 
+<!-- Modal to Display User Inputs -->
+<div *ngIf="showModal" class="modal fade show" tabindex="-1" style="display: block;" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Message Details</h5>
+        <button type="button" class="btn-close" (click)="closeModal()" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Message:</strong> {{ message }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

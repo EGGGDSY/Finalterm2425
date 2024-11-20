@@ -9,6 +9,9 @@ import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
+// Import FormsModule for template-driven forms
+import { FormsModule } from '@angular/forms';  // <-- Add this import
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule  // <-- Add FormsModule here
   ],
   providers: [],
   bootstrap: [AppComponent]
