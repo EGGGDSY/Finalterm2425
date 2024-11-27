@@ -29,3 +29,4 @@ This project is a web application designed for a car wash business, **Shine & Sp
 -- clone repo
 -- Install nodejs
 -- type npm install on terminal
+
