@@ -24,3 +24,8 @@ This project is a web application designed for a car wash business, **Shine & Sp
 - **Node.js & npm**: For managing dependencies and running the development server.
 
 ---
+
+## **How to open Website**
+-- clone repo
+-- Install nodejs
+-- type npm install on terminal
