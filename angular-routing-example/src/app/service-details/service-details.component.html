@@ -1,0 +1,42 @@
+<div class="container">
+    <h2 class="my-4">Service Details</h2>
+    
+    <!-- Service Details Form -->
+    <form>
+      <div class="mb-3">
+        <label for="serviceId" class="form-label">Service ID</label>
+        <input type="text" class="form-control" id="serviceId" value="1" disabled>
+      </div>
+      
+      <div class="mb-3">
+        <label for="serviceName" class="form-label">Service Name</label>
+        <input type="text" class="form-control" id="serviceName" value="Exterior Wash">
+      </div>
+  
+      <div class="mb-3">
+        <label for="serviceDescription" class="form-label">Service Description</label>
+        <textarea class="form-control" id="serviceDescription" rows="3">A thorough exterior cleaning that includes washing and waxing.</textarea>
+      </div>
+  
+      <div class="mb-3">
+        <label for="serviceCategory" class="form-label">Service Category</label>
+        <select class="form-select" id="serviceCategory">
+          <option value="Exterior">Exterior</option>
+          <option value="Interior">Interior</option>
+          <option value="Full">Full Service</option>
+        </select>
+      </div>
+  
+      <div class="mb-3">
+        <label for="cost" class="form-label">Cost</label>
+        <input type="number" class="form-control" id="cost" value="15.00">
+      </div>
+  
+      <!-- Buttons -->
+      <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary">Cancel</button>
+      </div>
+    </form>
+  </div>
+  
