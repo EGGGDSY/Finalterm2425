@@ -1,46 +1,89 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-10 col-sm-12">
-            <div class="card shadow-lg border-light rounded">
-                <div class="card-header text-center bg-primary text-white">
-                    <h2>User Profile</h2>
+      <div class="col-lg-8 col-md-10 col-sm-12">
+        <div class="card shadow-lg border-light rounded">
+          <div class="card-header text-center bg-dark text-white">
+            <h2>User Profile</h2>
+          </div>
+          <div class="card-body bg-light">
+            <form (ngSubmit)="saveProfile()">
+              <!-- Profile Image Box with Placeholder -->
+              <div class="text-center mb-4">
+                <div class="profile-image-box p-3 border rounded-circle shadow-sm" style="width: 180px; height: 180px; margin: 0 auto; background-color: #f3f3f3;">
+                  <img src="https://via.placeholder.com/150" alt="Profile Image" class="rounded-circle" width="150" height="150">
                 </div>
-                <div class="card-body">
-                    <!-- Profile Image Box with Placeholder -->
-                    <div class="text-center mb-4">
-                        <div class="profile-image-box p-3 border rounded-circle shadow-sm" style="width: 180px; height: 180px; margin: 0 auto; background-color: #f3f3f3;">
-                            <img src="https://via.placeholder.com/150" alt="Profile Image" class="rounded-circle" width="150" height="150">
-                        </div>
-                    </div>
+              </div>
   
-                    <!-- Profile Data (List Format) -->
-                    <ul class="list-group">
-                        <!-- Full Name -->
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <strong>Full Name:</strong>
-                            <span>John Doe M.</span>
-                        </li>
+              <!-- Profile Data (List Format) -->
+              <div class="form-group">
+                <!-- Full Name -->
+                <label for="fullName" class="text-muted">Full Name:</label>
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  class="form-control" 
+                  [(ngModel)]="profile.fullName" 
+                  name="fullName" 
+                  [disabled]="!isEditMode" 
+                  placeholder="Enter full name"
+                  [ngClass]="{'form-control-muted': !isEditMode}"
+                />
+              </div>
   
-                        <!-- Mailing Address -->
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <strong>Mailing Address:</strong>
-                            <span>House #123, Example St., Barangay ABC, City XYZ, Province/Region PQR</span>
-                        </li>
+              <div class="form-group mt-3">
+                <!-- Mailing Address -->
+                <label for="mailingAddress" class="text-muted">Mailing Address:</label>
+                <textarea 
+                  id="mailingAddress" 
+                  class="form-control" 
+                  [(ngModel)]="profile.mailingAddress" 
+                  name="mailingAddress" 
+                  [disabled]="!isEditMode" 
+                  placeholder="Enter mailing address"
+                  [ngClass]="{'form-control-muted': !isEditMode}"
+                ></textarea>
+              </div>
   
-                        <!-- Email Address -->
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <strong>Email Address:</strong>
-                            <span>johndoe&#64;example.com</span>
-                        </li>
+              <div class="form-group mt-3">
+                <!-- Email Address -->
+                <label for="email" class="text-muted">Email Address:</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  class="form-control" 
+                  [(ngModel)]="profile.email" 
+                  name="email" 
+                  [disabled]="!isEditMode" 
+                  placeholder="Enter email address"
+                  [ngClass]="{'form-control-muted': !isEditMode}"
+                />
+              </div>
   
-                        <!-- Mobile Number -->
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <strong>Mobile Number:</strong>
-                            <span>(123) 456-7890</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+              <div class="form-group mt-3">
+                <!-- Mobile Number -->
+                <label for="mobileNumber" class="text-muted">Mobile Number:</label>
+                <input 
+                  type="text" 
+                  id="mobileNumber" 
+                  class="form-control" 
+                  [(ngModel)]="profile.mobileNumber" 
+                  name="mobileNumber" 
+                  [disabled]="!isEditMode" 
+                  placeholder="Enter mobile number"
+                  [ngClass]="{'form-control-muted': !isEditMode}"
+                />
+              </div>
+  
+              <!-- Buttons to Edit / Save Profile -->
+              <div class="mt-4 text-center">
+                <button *ngIf="!isEditMode" class="btn btn-primary" type="button" (click)="toggleEditMode()">Edit Profile</button>
+                <button *ngIf="isEditMode" class="btn btn-success" type="submit">Save Profile</button>
+                <button *ngIf="isEditMode" class="btn btn-secondary" type="button" (click)="toggleEditMode()">Cancel</button>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+  
