@@ -12,12 +12,12 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'register', component: RegistrationComponent },
   { path: 'user-profile', component: UserProfileComponent },
-  { path: 'service', component: ServiceComponent },  // Added Service route
-  { path: 'service-details', component: ServiceDetailsComponent },  // Added Service Details route
+  { path: 'service', component: ServiceComponent },
+  { path: 'service-details', component: ServiceDetailsComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],  // Configure router with routes
-  exports: [RouterModule],  // Export the RouterModule to make the routes accessible
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
