@@ -9,6 +9,9 @@ import { ServiceComponent } from './service/service.component';
 import { ServiceDetailsComponent } from './service-details/service-details.component';
 import { AppRoutingModule } from './app-routing.module'; 
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { FormsModule } from '@angular/forms';
     RegistrationComponent,
     UserProfileComponent,
     ServiceComponent,  
-    ServiceDetailsComponent,  
+    ServiceDetailsComponent, 
+    LoginComponent, 
+    HeaderComponent, 
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

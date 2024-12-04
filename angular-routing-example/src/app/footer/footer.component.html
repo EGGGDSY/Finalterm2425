@@ -1,0 +1,48 @@
+<!-- footer.component.html -->
+
+<footer class="bg-dark text-light py-4 mt-auto">
+    <div class="container">
+      <div class="row d-flex">
+        <!-- About Card -->
+        <div class="col-md-4 mb-3">
+          <div class="card text-white bg-primary h-100">
+            <div class="card-header text-center">About</div>
+            <div class="card-body">
+              <h5 class="card-title">Shine & Sparkle Car Wash</h5>
+              <p class="card-text">We offer a range of premium car care services, including exterior and interior cleaning, waxing, polishing, and more. Our mission is to keep your car sparkling clean inside and out.</p>
+              <a href="/about" class="btn btn-light">Learn More</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Contact Card -->
+        <div class="col-md-4 mb-3">
+          <div class="card text-white bg-secondary h-100">
+            <div class="card-header text-center">Contact</div>
+            <div class="card-body">
+              <h5 class="card-title">Get in Touch</h5>
+              <p class="card-text">Have any questions or need support? Reach out to us through the contact form, or call us directly. We're here to help!</p>
+              <a href="/contact" class="btn btn-light">Contact Us</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Branches Card -->
+        <div class="col-md-4 mb-3">
+          <div class="card text-white bg-info h-100">
+            <div class="card-header text-center">Branches</div>
+            <div class="card-body">
+              <h5 class="card-title">Our Locations</h5>
+              <p class="card-text">We have multiple branches to serve you. Find the nearest one for your convenience and visit us for exceptional car wash services.</p>
+              <a href="/branches" class="btn btn-light">Our Branches</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Router Outlet for Footer -->
+      <div class="mt-4">
+        <router-outlet name="footer"></router-outlet>
+      </div>
+    </div>
+</footer>
