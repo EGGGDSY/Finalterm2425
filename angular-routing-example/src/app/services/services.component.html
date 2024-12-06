@@ -1,0 +1,37 @@
+<div class="container my-5">
+    <h2 class="my-4 text-center">Car Wash Service List</h2>
+  
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Service ID</th>
+          <th>Service Name</th>
+          <th>Service Category</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let service of services">
+          <td>{{ service.id }}</td>
+          <td>{{ service.name }}</td>
+          <td>{{ service.category }}</td>
+          <td>{{ service.price | currency }}</td>
+          <td class="d-flex justify-content-start">
+            <button class="btn btn-primary btn-sm mx-2" (click)="viewServiceDetails(service)">View</button>
+            <button class="btn btn-warning btn-sm mx-2" (click)="editService(service)">Edit</button>
+            <button class="btn btn-danger btn-sm mx-2" (click)="deleteService(service.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div *ngIf="selectedService" class="my-5">
+      <h4>Selected Service Details</h4>
+      <p><strong>Service ID:</strong> {{ selectedService.id }}</p>
+      <p><strong>Service Name:</strong> {{ selectedService.name }}</p>
+      <p><strong>Service Category:</strong> {{ selectedService.category }}</p>
+      <p><strong>Price:</strong> {{ selectedService.price | currency }}</p>
+    </div>
+  </div>
+  

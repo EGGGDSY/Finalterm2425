@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { ServiceComponent } from './service/service.component';
+import { ServicesComponent } from './services/services.component';
 import { ServiceDetailsComponent } from './service-details/service-details.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'user-profile', component: UserProfileComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'service', component: ServiceComponent,},
+  { path: 'service', component: ServicesComponent,},
   { path: '', component: AboutComponent,outlet: 'left' },
   { path: '', component: ServiceDetailsComponent,outlet: 'right'},
   { path: '', component: HeaderComponent, outlet: 'header' },
