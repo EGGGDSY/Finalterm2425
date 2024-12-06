@@ -21,21 +21,4 @@ export class ServicesComponent {
   viewServiceDetails(service: Service): void {
     this.selectedService = service;
   }
-
-  // Edit service
-  editService(updatedService: Service): void {
-    const index = this.services.findIndex(service => service.id === updatedService.id);
-    if (index !== -1) {
-      this.services[index] = updatedService;
-      this.selectedService = null;
-    }
-  }
-
-  // Delete service
-  deleteService(serviceId: number): void {
-    this.services = this.services.filter(service => service.id !== serviceId);
-    if (this.selectedService?.id === serviceId) {
-      this.selectedService = null;
-    }
-  }
 }
