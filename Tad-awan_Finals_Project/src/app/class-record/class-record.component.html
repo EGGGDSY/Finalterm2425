@@ -1,9 +1,5 @@
-<!-- class-record.component.html -->
-
 <div class="container mt-4">
   <h2 class="text-light">Class Records</h2>
-
-  <!-- Table to display the records -->
   <table class="table table-dark table-striped">
     <thead>
       <tr>
@@ -19,7 +15,7 @@
         <td>{{ record.name }}</td>
         <td>{{ record.type }}</td>
         <td>
-          <button class="btn btn-dark" (click)="viewRecordDetails(record)">
+          <button class="btn btn-dark me-2" (click)="viewRecordDetails(record)">
             View Details
           </button>
           <button class="btn btn-dark" (click)="editRecord(record)" *ngIf="!isEditing">
@@ -30,11 +26,11 @@
     </tbody>
   </table>
 
-  <!-- Display the selected record details -->
+  
   <div *ngIf="selectedRecord" class="my-5">
     <h4 class="text-light">Selected Record Details</h4>
     <div class="card bg-dark text-light shadow">
-      <div class="card-header bg-primary text-white">
+      <div class="card-header bg-dark text-white">
         <h5 class="mb-0">Record Details</h5>
       </div>
       <div class="card-body">
