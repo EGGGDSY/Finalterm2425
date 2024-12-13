@@ -26,13 +26,17 @@
     </tbody>
   </table>
 
+  <pagination-controls
+  class="text-light"
+  (pageChange)="currentPage = $event"
+></pagination-controls>
+
   
   <div *ngIf="selectedRecord" class="my-5">
     <h4 class="text-light">Selected Record Details</h4>
     <div class="card bg-dark text-light shadow">
       <div class="card-header bg-dark text-white">
         <h5 class="mb-0">Record Details</h5>
-      </div>
       <div class="card-body">
         <p><strong>ID:</strong> {{ selectedRecord.id }}</p>
         <p><strong>Name:</strong> {{ selectedRecord.name }}</p>
@@ -40,6 +44,8 @@
         <p><strong>Age:</strong> {{ selectedRecord.age }}</p>
         <p><strong>Grade:</strong> {{ selectedRecord.grade }}</p>
         <p><strong>Address:</strong> {{ selectedRecord.address }}</p>
+        <button class="btn btn-sm btn-danger" (click)="unviewRecordDetails()">Close Details</button>
+      </div>
       </div>
     </div>
   </div>
